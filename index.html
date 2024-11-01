@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de Budín</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <header>
+        <h1>Budín zelev</h1>
+        <nav>
+            <ul>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#pedidos">Pedidos</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="galeria">
+        <h2>Conoce nuestros Budines</h2>
+        <div class="slider">
+            <img id="slide" src="img1.jpg" alt="Budin 1">
+            <button onclick="previousimage()">&#10094;</button>
+            <button onclick="nextimage()">&#10095;</button>
+        </div>
+    </section>
+
+    <section id="pedidos">
+        <h2>Compra Budines ya</h2>
+        <form id="pedidoForm" onsubmit="enviarPorWhatsApp(event)">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" required>
+            
+            <label for="pedido">Detalles de su Pedido:</label>
+            <textarea id="pedido" name="pedido" required></textarea>
+
+            <button type="submit">Enviar Pedido</button>
+        </form>
+
+        <script src="cambiarimagen.js"></script>
+        <script src="Pedidos.js"></script>
+    </section>
+</body>
+</html>
